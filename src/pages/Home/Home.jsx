@@ -3,6 +3,7 @@ import { fetchTrendingMovies } from '../../services/API';
 import { MovieList } from '../../components/MovieList/MovieList';
 import { Title } from './Home.styled'
 
+// console.log(1);
 
 export const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
