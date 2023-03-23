@@ -11,7 +11,6 @@ export async function fetchTrendingMovies() {
   return results;
   // return response.data.results;
 }    
-fetchTrendingMovies().then(data=> console.log(data));
 
 
 export async function fetchSearchMovies(query) {
