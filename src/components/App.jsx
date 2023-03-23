@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+// import { lazy } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { Header } from './Header/Header';
@@ -6,7 +6,9 @@ import { Layout } from './Layout';
 
 import { GlobalStyle } from './GlobalStyle';
 
-const Home = lazy(() => import('pages/Home/Home'));
+import Home from "../pages/Home/Home"
+
+// const Home = lazy(() => import('pages/Home/Home'));
 // const Movies = lazy(() => import('pages/Movies'));
 // const MovieDetails = lazy(() => import('pages/MovieDetails'));
 // const Cast = lazy(() => import(''));

@@ -3,15 +3,14 @@ import { fetchTrendingMovies } from '../../services/API';
 import { MovieList } from '../../components/MovieList/MovieList';
 import { Title } from './Home.styled'
 
-console.log(1);
 
-export const Home = () => {
+export default function Home() {
   const [trendingMovies, setTrendingMovies] = useState([]);
 
   useEffect(() => {
     async function getMovies() {
       try {
-        const data = await fetchTrendingMovies().then(data=> console.log(data));
+        const data = await fetchTrendingMovies();
         setTrendingMovies(data);
       } catch (error) {
         console.log(error.message);
@@ -22,6 +21,7 @@ export const Home = () => {
     // fetchTrendingMovies().then(resp => console.log(resp));
   }, []);
 
+
   return (
     <main>
       <Title>Trending today</Title>
@@ -29,3 +29,4 @@ export const Home = () => {
     </main>
   );
 };
+
