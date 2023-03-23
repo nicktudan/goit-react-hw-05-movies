@@ -24,7 +24,7 @@ export const App = () => {
           {/* <Route path="cast" element={<Cast />} /> */}
           {/* <Route path="reviews" element={<Reviews />} /> */}
         </Route>
-        <Route path="*" element={<Navigate to="/dashboard" replace={true} />} />
+        <Route path="*" element={<Navigate to="/" replace={true} />} />
       </Routes>
     </Layout>
   );
