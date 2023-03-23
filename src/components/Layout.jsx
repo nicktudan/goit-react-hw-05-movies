@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Layout = styled.div`
-    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,5 +10,5 @@ export const Layout = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 16px;
-    padding-bottom: 24px;
+    padding: 24px;
 `   
