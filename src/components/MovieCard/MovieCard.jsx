@@ -1,4 +1,4 @@
-import { PropTypes } from 'prop-types';
+// import { PropTypes } from 'prop-types';
 
 import {
   MovieCardWrap,
@@ -10,23 +10,22 @@ import {
 
 export const MovieCard = ({
   movie: {
-    name,
-    title,
+    original_title,
     poster_path,
     vote_average,
     overview,
     release_date,
-    genres =[],
+    genres = [],
   },
 }) => (
   <MovieCardWrap>
     <MovieCardImage
       src={`https://image.tmdb.org/t/p/original/${poster_path}`}
-      alt={title}
+      alt={original_title}
     />
     <MovieCardInfo>
       <h2>
-        {title ?? name}({release_date.slice(0, 4)})
+        {original_title}({release_date.slice(0, 4)})
       </h2>
       <MovieCardText>
         User Score: {Math.round(vote_average * 10)}%
@@ -41,6 +40,6 @@ export const MovieCard = ({
 );
 
 
-MovieCard.propTypes = {
-  movie: PropTypes.object.isRequired,
-}
+// MovieCard.propTypes = {
+//   movie: PropTypes.object.isRequired,
+// }

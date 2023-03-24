@@ -18,7 +18,7 @@ export const MovieList = ({ movies }) => {
     <MoviesList>
       {movies.map(({ id, title, original_title, poster_path }) => (
         <MovieItem key={id}>
-          <LinkMovieItem to={`movies/${id}`} state={{ from: location }}>
+          <LinkMovieItem to={`/movies/${id}`} state={{ from: location }}>
             <MovieItemImage
               src={`https://image.tmdb.org/t/p/original/${poster_path}`}
               alt={title}

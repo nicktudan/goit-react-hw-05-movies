@@ -13,14 +13,14 @@ import {
 } from './MovieDeyails.styled';
 
 
-export default function MovieDeyails() {
+export default function MovieDetails() {
     const { movieId } = useParams;
     const [movie, setMovie] = useState(null);
     const location = useLocation();
     const backLinkHref = location.state?.from ?? '/';
 
     useEffect(() => {
-        async function getMovieDeyails() {
+        async function getMovieDetails() {
             try {
                 const data = await fetchMovieDetails(movieId);
                 setMovie(data);
@@ -28,7 +28,7 @@ export default function MovieDeyails() {
                 console.log(error);
             }
         }
-        getMovieDeyails();
+        getMovieDetails();
     }, [movieId])
 
     return (

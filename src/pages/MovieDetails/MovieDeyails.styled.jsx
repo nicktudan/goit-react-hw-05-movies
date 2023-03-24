@@ -30,7 +30,6 @@ export const AboutList = styled.ul`
 `;
 
 export const AboutLink = styled(NavLink)`
-  /* color: ${props => props.theme.colors.text}; */
   padding: 8px;
   margin: 0 20px;
   margin-bottom: 20px;
