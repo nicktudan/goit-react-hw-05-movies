@@ -17,8 +17,6 @@ export default function Home() {
       }
     }
     getMovies();
-    // fetchTrendingMovies().then(resp => setTrendingMovies(resp));
-    // fetchTrendingMovies().then(resp => console.log(resp));
   }, []);
 
 
@@ -29,4 +27,3 @@ export default function Home() {
     </main>
   );
 };
-

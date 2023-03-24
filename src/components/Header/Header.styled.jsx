@@ -40,8 +40,9 @@ export const LinkNav = styled(NavLink)`
     color: #fff;
     background-color: #303f9f;
   }
-  /* &.active {
-    color: #fff;
-    background-color: #303f9f;
-  } */
+
+  &.active {
+    color: #303f9f;
+    background-color: #fff;
+  }
 `;

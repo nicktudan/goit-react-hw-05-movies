@@ -27,6 +27,32 @@ body {
 img {
     display: block;
     max-width: 100%;
-    height: auto;
+    /* height: auto; */
 }
-`
+
+h1,
+h2, 
+h3, 
+h4, 
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+ol,
+ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+button {
+    font-size: 16px;
+    text-align: center;
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+li {list-style: none;}
+`;

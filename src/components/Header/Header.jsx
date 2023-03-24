@@ -1,6 +1,6 @@
-// import { Loader } from "components/Loader/Loader";
-// import { Suspense } from "react";
-// import { Outlet } from "react-router-dom";
+import { Loader } from "components/Loader/Loader";
+import { Suspense } from "react";
+import { Outlet } from "react-router-dom";
 import { StyledHeader, LinkNav } from './Header.styled';
 
 export const Header = () => {
@@ -12,9 +12,9 @@ export const Header = () => {
           <LinkNav to="/movies">Movies</LinkNav>
         </nav>
       </StyledHeader>
-        {/* <Suspense fallback={<Loader />}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
-        </Suspense> */}
+        </Suspense>
     </>
   );
 }
