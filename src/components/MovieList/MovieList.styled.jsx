@@ -30,6 +30,7 @@ export const LinkMovieItem = styled(Link)`
 
 export const MovieItemImage = styled.img`
   object-fit: cover;
+  height: 520px;
   max-width: 100%; 
 `;
 
