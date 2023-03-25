@@ -32,7 +32,7 @@ export async function fetchMovieCredits(id) {
 
 export async function fetchMovieReviews(id) {
   const response = await axios.get(
-    `movie/${id}/reviews?api_key=${API_KEY}&page=1`
+    `movie/${id}/reviews?api_key=${API_KEY}`
   );
   return response.data.results;
 }  

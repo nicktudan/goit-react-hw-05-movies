@@ -27,7 +27,6 @@ export const LinkNav = styled(NavLink)`
   font-weight: 500;
   text-decoration: none;
   text-align: center;
-  font-weight: 500;
   color: #000;
   background-color: #3f51b5;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
