@@ -1,5 +1,7 @@
 import { PropTypes } from 'prop-types';
 
+import avatar from '..//..//img/noimage.jpg';
+
 import {
   MovieCardWrap,
   MovieCardImage,
@@ -22,24 +24,30 @@ export const MovieCard = ({
   },
 }) => {
   return (
-  <MovieCardWrap>
-    <MovieCardImage
-      src={`https://image.tmdb.org/t/p/original/${poster_path}`}
-      alt={original_title}
-    />
-    <MovieCardInfo>
-      <MovieCardTitle>
-        {original_title ?? title}({release_date.slice(0, 4)})
-      </MovieCardTitle>
-      <MovieCardText>
-        User Score: {Math.round(vote_average * 10)}%
-      </MovieCardText>
-      <MovieCardTitleS>Overview</MovieCardTitleS>
-      <MovieCardText>{overview}</MovieCardText>
-      <MovieCardTitleS>Genres</MovieCardTitleS>
-      <MovieCardText>{genres.map(({ name }) => name).join(', ')}</MovieCardText>
-    </MovieCardInfo>
-  </MovieCardWrap>
+    <MovieCardWrap>
+      <MovieCardImage
+        src={
+          poster_path
+            ? `https://image.tmdb.org/t/p/original/${poster_path}`
+            : avatar
+        }
+        alt={original_title}
+      />
+      <MovieCardInfo>
+        <MovieCardTitle>
+          {original_title ?? title}({release_date.slice(0, 4)})
+        </MovieCardTitle>
+        <MovieCardText>
+          User Score: {Math.round(vote_average * 10)}%
+        </MovieCardText>
+        <MovieCardTitleS>Overview</MovieCardTitleS>
+        <MovieCardText>{overview}</MovieCardText>
+        <MovieCardTitleS>Genres</MovieCardTitleS>
+        <MovieCardText>
+          {genres.map(({ name }) => name).join(', ')}
+        </MovieCardText>
+      </MovieCardInfo>
+    </MovieCardWrap>
   );
 }
 

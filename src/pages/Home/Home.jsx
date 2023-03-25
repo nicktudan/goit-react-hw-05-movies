@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <main>
       <Title>Trending today</Title>
-      <MovieList movies={trendingMovies} />
+      {trendingMovies && <MovieList movies={trendingMovies} />}
     </main>
   );
 };

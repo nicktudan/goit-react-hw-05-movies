@@ -23,7 +23,7 @@ export const CastItem = styled.li`
 `;
 
 export const CastImg = styled.img`
-  width: 320px;
+  height: 320px;
   object-fit: cover;
 `;
 
@@ -40,3 +40,4 @@ export const CastInfoTitle = styled.h3`
     padding-bottom: 10px;
   }
 `;
+

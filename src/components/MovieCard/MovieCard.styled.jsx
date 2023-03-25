@@ -25,4 +25,5 @@ export const MovieCardTitleS = styled.h4`
 export const MovieCardText = styled.p`
   margin: 20px 0;
   font-size: 20px;
+  text-align: justify;
 `;

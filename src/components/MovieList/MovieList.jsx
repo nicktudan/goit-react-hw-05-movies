@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom";
 
+import avatar from '..//..//img/noimage.jpg';
+
 import { PropTypes } from 'prop-types';
 
 import {
@@ -20,7 +22,7 @@ export const MovieList = ({ movies }) => {
         <MovieItem key={id}>
           <LinkMovieItem to={`/movies/${id}`} state={{ from: location }}>
             <MovieItemImage
-              src={`https://image.tmdb.org/t/p/original/${poster_path}`}
+              src={poster_path ? `https://image.tmdb.org/t/p/original/${poster_path}` : avatar}
               alt={title}
             />
           </LinkMovieItem>

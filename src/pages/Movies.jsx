@@ -34,7 +34,7 @@ export default function Movies() {
   return (
     <>
       <Searchbar onSubmit={handleFormSubmit} />
-      <MovieList movies={movies} />
+      {movies && <MovieList movies={movies} />}
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>

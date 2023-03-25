@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 
 import { fetchMovieCredits } from '..//../services/API';
+import avatar from "..//..//img/noavatar.jpg"
 
 import {
   CastList,
@@ -30,25 +31,25 @@ export default function Cast() {
   return (
     <>
       {cast && (
-        <>
-          <CastList>
-            {cast &&
-              cast.map(({ cast_id, profile_path, name, character }) => (
-                <CastItem key={cast_id}>
-                  <CastImg
-                    src={`https://image.tmdb.org/t/p/original/${profile_path}`}
-                    alt={name}
-                  />
-                  <CastInfo>
-                    <CastInfoTitle>{name}</CastInfoTitle>
-                    <CastInfoTitle>Character: {character}</CastInfoTitle>
-                  </CastInfo>
-                </CastItem>
-              ))}
-          </CastList>
-        </>
-      )}
+        <CastList>
+          {cast.map(({ cast_id, profile_path, name, character }) => (
+            <CastItem key={cast_id}>
+              <CastImg
+                src={
+                  profile_path
+                    ? `https://image.tmdb.org/t/p/original/${profile_path}`
+                    : avatar
+                }
+                alt={name}
+              />
+              <CastInfo>
+                <CastInfoTitle>{name}</CastInfoTitle>
+                <CastInfoTitle>Character: {character}</CastInfoTitle>
+              </CastInfo>
+            </CastItem>
+            ))}
+        </CastList>
+      ) }
     </>
   );
 }
-
